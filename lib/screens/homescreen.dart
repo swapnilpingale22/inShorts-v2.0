@@ -109,7 +109,8 @@ class _HomescreenState extends State<Homescreen> {
                                   news.articles[index].urlToImage.toString(),
                               fit: BoxFit.cover,
                               errorWidget: (context, url, error) =>
-                                  const Center(child: Text('No Image')),
+                                  const Center(
+                                      child: Text('No Image available')),
                             ),
                           ),
                           Positioned(
@@ -139,14 +140,16 @@ class _HomescreenState extends State<Homescreen> {
                                 Text(
                                   '⚪ ${news.articles[index].source.name}',
                                   style: const TextStyle(
-                                    fontSize: 14,
+                                    fontSize: 16,
+                                    fontFamily: "Hubballi",
                                   ),
                                 ),
                                 Text(
                                   '⌚ $timeAgo ago',
                                   // '⌚ ${news.articles[index].publishedAt}',
                                   style: const TextStyle(
-                                    fontSize: 14,
+                                    fontSize: 16,
+                                    fontFamily: "Hubballi",
                                   ),
                                 ),
                               ],
@@ -169,7 +172,8 @@ class _HomescreenState extends State<Homescreen> {
                                     maxLines: 4,
                                     overflow: TextOverflow.ellipsis,
                                     style: const TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 18,
+                                      fontFamily: "Hubballi",
                                     ),
                                   )
                                 : const Text(''),
@@ -188,7 +192,8 @@ class _HomescreenState extends State<Homescreen> {
                                               15)
                                   : '',
                               style: const TextStyle(
-                                fontSize: 16,
+                                fontSize: 18,
+                                fontFamily: "Hubballi",
                               ),
                             ),
                           ],
@@ -206,7 +211,6 @@ class _HomescreenState extends State<Homescreen> {
               ),
             );
           }
-          // ... your existing code for displaying news ...
         },
       ),
       floatingActionButton: FloatingActionButton(
